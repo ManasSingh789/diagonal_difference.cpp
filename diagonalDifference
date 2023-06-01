@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[3][3];
+	int sum1 = 0,sum2 = 0,i,j,k,l,m,n,diff;
+	cout << "Enter The Elements of Array " << "\n";
+	for(k=0;k<3;k++)
+	{
+		for(l=0;l<3;l++)
+		{
+			cin >> arr[k][l];
+		}
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(i==j)
+			{
+				sum1 = sum1 + arr[i][j];
+			}
+		}
+	}
+	
+	sum2 = sum2 + arr[0][2] + arr[1][1] + arr[2][0];
+	diff = sum1-sum2;
+	if(diff<0)
+	{
+		diff=diff*-1;
+	}
+	cout << diff;
+}
